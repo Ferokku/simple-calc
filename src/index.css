@@ -16,7 +16,7 @@
     --secondary-foreground: 220 20% 20%;
     --muted: 220 14% 93%;
     --muted-foreground: 220 10% 46%;
-    --accent: 32 95% 54%;
+    --accent: 199 89% 58%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -28,8 +28,8 @@
     --calc-display: 220 20% 8%;
     --calc-btn-number: 220 10% 30%;
     --calc-btn-number-hover: 220 10% 38%;
-    --calc-btn-op: 32 95% 54%;
-    --calc-btn-op-hover: 32 95% 62%;
+    --calc-btn-op: 199 89% 58%;
+    --calc-btn-op-hover: 199 89% 66%;
     --calc-btn-fn: 220 10% 50%;
     --calc-btn-fn-hover: 220 10% 58%;
     --calc-text: 0 0% 100%;
@@ -57,7 +57,7 @@
     --secondary-foreground: 0 0% 95%;
     --muted: 220 14% 20%;
     --muted-foreground: 220 10% 55%;
-    --accent: 32 95% 54%;
+    --accent: 199 89% 58%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 95%;

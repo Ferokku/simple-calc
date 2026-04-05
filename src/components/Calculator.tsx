@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 type CalcButtonProps = {
   label: string;
@@ -81,6 +81,24 @@ const Calculator = () => {
     setOp(null);
     setResetNext(true);
   };
+
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key >= "0" && e.key <= "9") inputDigit(e.key);
+    else if (e.key === ".") inputDot();
+    else if (e.key === "+") handleOp("+");
+    else if (e.key === "-") handleOp("−");
+    else if (e.key === "*") handleOp("×");
+    else if (e.key === "/") { e.preventDefault(); handleOp("÷"); }
+    else if (e.key === "Enter" || e.key === "=") handleEquals();
+    else if (e.key === "Escape" || e.key === "c" || e.key === "C") clear();
+    else if (e.key === "%") percent();
+    else if (e.key === "Backspace") setDisplay(prev => prev.length > 1 ? prev.slice(0, -1) : "0");
+  }, [display, prev, op, resetNext]);
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [handleKeyDown]);
 
   const formatDisplay = (val: string) => {
     const num = parseFloat(val);
